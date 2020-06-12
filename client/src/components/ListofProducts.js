@@ -11,7 +11,7 @@ export default class Listing extends Component {
 
     componentDidMount()
     {
-        axios.get('http://127.0.0.1:8000/api/category')
+        axios.get('https://backend-user-finalproject.herokuapp.com/api/category')
         .then(response=>{
             this.setState({categories:response.data})
         })
@@ -19,7 +19,7 @@ export default class Listing extends Component {
 
     onDelete(category_id)
     {
-        axios.delete('http://127.0.0.1:8000/api/category/delete/'+category_id)
+        axios.delete('https://backend-user-finalproject.herokuapp.com/api/category/delete/'+category_id)
         .then(response=>{
             
             var categories = this.state.categories

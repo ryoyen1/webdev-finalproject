@@ -48,17 +48,17 @@ class CategoryController extends Controller
         $category->price = $request->category_price;
         $category->quantity = $request->category_quantity;
         $category->description = $request->category_description;
-        // $category->images = $request->category_image;
+        $category->image = $request->category_image;
 
-        if ($request->filled('category_image')){
+        // if ($request->filled('category_image')){
             
             
             
-            $split_image = explode("C:\\fakepath\\", $request->category_image);
+        //     $split_image = explode("C:\\fakepath\\", $request->category_image);
 
+        //     $category->images = $split_image[1];
             // echo $split_image[1];
 
-            $category->images = $split_image[1];
 
             // echo 'FUCK';
             // $file = $request->file('images');
@@ -73,10 +73,10 @@ class CategoryController extends Controller
             // echo 'FUCKHER';
             // $category->images = $request->category_image;
             // echo 'FUCKEVERYONE';
-        } 
-        else {
-            $category->images = '';
-        }
+        // } 
+        // else {
+        //     $category->images = '';
+        // }
 
         $category->save();
 

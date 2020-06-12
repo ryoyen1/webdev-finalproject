@@ -64,7 +64,7 @@ export default class Add extends Component {
 
 
 
-        Axios.post('http://127.0.0.1:8000/api/category/store', category)
+        Axios.post('https://backend-user-finalproject.herokuapp.com/api/category/store', category)
         .then(res=>console.log(res.data))
     }
 
