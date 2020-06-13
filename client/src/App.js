@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './App.css';
-import ReactDOM from 'react-dom'
+// import ReactDOM from 'react-dom'
 
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 import Landing from './components/Landing'
@@ -38,6 +38,6 @@ class App extends Component{
 
 export default App
 
-if (document.getElementById('main')) {
-  ReactDOM.render(<App />, document.getElementById('main'));
-}
+// if (document.getElementById('main')) {
+//   ReactDOM.render(<App />, document.getElementById('main'));
+// }

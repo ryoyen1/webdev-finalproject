@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios'
+import {BrowserRouter as Link} from 'react-router-dom'
+
 
 export default class Listing extends Component {
     constructor(){
@@ -65,7 +67,8 @@ export default class Listing extends Component {
                                             </div>
                                             <p class="mb-4">{category.description}</p>
                                             <div>
-                                                 <a href="/#" class="btn btn-black mr-1 rounded-0">Cart</a>
+                                                <Link to={`/category/edit/${category.id}`}>Edit</Link>
+                                                <a href="/#" class="btn btn-black mr-1 rounded-0">Cart</a>
                                                 <a href="/#" class="btn btn-black btn-outline-black ml-1 rounded-0">View</a>
                                             </div>
                                             </div>                                            

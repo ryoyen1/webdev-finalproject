@@ -2,7 +2,7 @@ import axios from 'axios'
 
 export const register = newUser =>{
     return axios
-        .post('api/register', newUser, {
+        .post('https://backend-login-finalproject.herokuapp.com/api/register', newUser, {
             headers: { 'Content-Type': 'application/json'}
         })
         .then(res => {
@@ -15,7 +15,7 @@ export const register = newUser =>{
 
 export const login = user =>{
     return axios
-        .post('api/login', {
+        .post('https://backend-login-finalproject.herokuapp.com/api/login', {
             email: user.email,
             password: user.password
         },{
@@ -32,7 +32,7 @@ export const login = user =>{
 
 export const getProfile = () => {
     return axios
-        .get('api/profile', {
+        .get('https://backend-login-finalproject.herokuapp.com/api/profile', {
             headers: { Authorization: `Bearer ${localStorage.usertoken}`}
         })
         .then(response => {

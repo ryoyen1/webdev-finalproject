@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import {BrowserRouter as Router,Link,Route} from 'react-router-dom'
 
+// var axios = require('axios')
+
+// var axiosInstance = axios.create({
+//     baseURL: 'https://backend-user-finalproject.herokuapp.com'
+// })
+
+// module.exports = axiosInstance
+
 export default class Listing extends Component {
     constructor(){
         super()
@@ -47,15 +55,17 @@ export default class Listing extends Component {
 
     }
 
+
+
     render(){
         return (
             <div>
-                <Router>
+                {/* <Router> */}
                 <table class="table">
                     <thead>
                         <tr>
                         <th scope="col">#</th>
-                        <th scope="col">Category Name</th>
+                        <th scope="col">Category N</th>
                         <th scope="col">Price</th>
                         <th scope="col">Quantity</th>
                         <th scope="col">Description</th>
@@ -72,14 +82,18 @@ export default class Listing extends Component {
                         <td>{category.price}</td>
                         <td>{category.quantity}</td>
                         <td>{category.description}</td>
-                        <td><a href="#" onClick={this.onDelete.bind(this,category.id)}>Delete</a></td>
+                        <td>
+                            <Link to={`/category/edit/${category.id}`}>Edit</Link> |
+                            <a href="#" onClick={this.onDelete.bind(this,category.id)}>Delete</a></td>
+
                         <td>
                             <Link to={`/category/${category.id}`}>View</Link>
-                            <a href="#" onClick={this.onView.bind(this,category.id)}>View</a></td>)
+                            {/* <a href="#" onClick={this.onView.bind(this,category.id)}>View</a></td> */}
                         {/* {this.state.categories_view.map(category=>{
                             return (
                         )
                         })} */}
+                        </td>
                         
                         </tr>
                             )
@@ -87,7 +101,7 @@ export default class Listing extends Component {
                         }
                     </tbody>
                 </table>
-                </Router>
+                {/* </Router> */}
             </div>
         );
     }
