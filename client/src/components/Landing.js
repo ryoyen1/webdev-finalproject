@@ -171,7 +171,6 @@ onDelete(category_id)
                 <span class="number">01.</span>
                 <h3 class="text-black mb-4 font-weight-bold">About This Product</h3>
                 <p class="mb-4">{category.description}</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus soluta assumenda sed optio, error at?</p>
                 
                 <div class="mb-4"> 
                   <h3 class="text-black font-weight-bold h5">Price:</h3>
@@ -202,9 +201,9 @@ onDelete(category_id)
               </div>
             </div>
             <div class="col-md-3 ml-auto">
-              <h3 class="section-sub-title">Merchant Company</h3>
+              <h3 class="section-sub-title"></h3>
               <h2 class="section-title mb-3">About Us</h2>
-              <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui fuga ipsa, repellat blanditiis nihil, consectetur. Consequuntur eum inventore, rem maxime, nisi excepturi ipsam libero ratione adipisci alias eius vero vel!</p>
+              <p class="mb-4">!!Description about us!!</p>
               <p><a href="/#" class="btn btn-black btn-black--hover rounded-0">Learn More</a></p>
             </div>
           </div>
