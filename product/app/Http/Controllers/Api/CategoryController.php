@@ -118,6 +118,10 @@ class CategoryController extends Controller
     {
         $category = Category::find($id);
         $category->name = $request->category_name;
+        $category->price = $request->category_price;
+        $category->quantity = $request->category_quantity;
+        $category->description = $request->category_description;
+        $category->image = $request->category_image;
         $category->save();
     }
 

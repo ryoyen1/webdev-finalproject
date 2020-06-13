@@ -22,19 +22,10 @@ class Landing extends Component {
                     </Link>
                 </li>
                 <li className="nav-item">
-                    <Link to="/add" className="nav-link">
-                        Add
-                    </Link>
-                </li>
-                <li className="nav-item">
                     <Link to="/listofproducts" className="nav-link">
                         Products list
                     </Link>
                 </li>
-                <li className="nav-item"><a href="#special-section" className="nav-link">Special</a></li>
-                <li className="nav-item"><a href="#testimonials-section" className="nav-link">Testimonials</a></li>
-                <li className="nav-item"><a href="#blog-section" className="nav-link">Blog</a></li>
-                <li className="nav-item"><a href="#contact-section" className="nav-link">Contact</a></li>
             </ul>
         )
 
@@ -50,11 +41,16 @@ class Landing extends Component {
                         Logout
                     </a>
                 </li>
-                <li className="nav-item"><a href="#products-section" className="nav-link">Products</a></li>
-                <li className="nav-item"><a href="#special-section" className="nav-link">Special</a></li>
-                <li className="nav-item"><a href="#testimonials-section" className="nav-link">Testimonials</a></li>
-                <li className="nav-item"><a href="#blog-section" className="nav-link">Blog</a></li>
-                <li className="nav-item"><a href="#contact-section" className="nav-link">Contact</a></li>
+                <li className="nav-item">
+                    <Link to="/listofproducts" className="nav-link">
+                        Products list
+                    </Link>
+                </li>
+                <li className="nav-item">
+                    <Link to="/add" className="nav-link">
+                        Add
+                    </Link>
+                </li>
             </ul>
                 
         )

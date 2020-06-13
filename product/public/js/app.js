@@ -70431,9 +70431,13 @@ var Edit = /*#__PURE__*/function (_Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('http://127.0.0.1:8000/api/category/edit/' + this.props.match.params.id).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('https://backend-user-finalproject.herokuapp.com/api/category/edit/' + this.props.match.params.id).then(function (response) {
         _this2.setState({
-          category_name: response.data.name
+          category_name: response.data.name,
+          category_price: response.data.price,
+          category_quantity: response.data.quantity,
+          category_description: response.data.description,
+          category_image: response.data.images
         });
       });
     }
@@ -70483,7 +70487,7 @@ var Edit = /*#__PURE__*/function (_Component) {
         category_description: this.state.category_description,
         category_image: this.state.category_image
       };
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.put('http://127.0.0.1:8000/api/category/update/' + this.props.match.params.id, category).then(function (res) {
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.put('https://backend-user-finalproject.herokuapp.com/api/category/update/' + this.props.match.params.id, category).then(function (res) {
         return console.log(res.data);
       });
     }

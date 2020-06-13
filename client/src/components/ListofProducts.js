@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios'
-import {BrowserRouter as Link} from 'react-router-dom'
+import {BrowserRouter as withRouter,Link} from 'react-router-dom'
 
 
 export default class Listing extends Component {
@@ -54,7 +54,7 @@ export default class Listing extends Component {
                             <div class="row">
                             {this.state.categories.map(category=>{
                             return (
-                                    <div class="col-lg-4 col-md-3 mb-5">
+                                <div class="col-lg-4 col-md-3 mb-5">
                                         <div class="product-item">
                                             <figure>
                                             <img src="assets/images/questionmark.png" alt="" class="img-fluid"/>
@@ -62,15 +62,22 @@ export default class Listing extends Component {
                                             <div class="px-4">
                                             <h3><a href="/#">{category.name}</a></h3>
                                             <div class="mb-3">
-                                                <span class="meta-icons mr-3"><a href="/#" class="mr-2"><span class="icon-star text-warning"></span></a> 5.0</span>
-                                                <span class="meta-icons wishlist"><a href="/#" class="mr-2"><span class="icon-heart"></span></a> 29</span>
+                                                <span class="meta-icons mr-3"><a href="/#" class="mr-2"></a>${category.price}</span>
+                                                <span class="meta-icons wishlist"><a href="/#" class="mr-2"></a>Stock:{category.quantity}</span>
                                             </div>
                                             <p class="mb-4">{category.description}</p>
-                                            <div>
-                                                <Link to={`/category/edit/${category.id}`}>Edit</Link>
-                                                <a href="/#" class="btn btn-black mr-1 rounded-0">Cart</a>
-                                                <a href="/#" class="btn btn-black btn-outline-black ml-1 rounded-0">View</a>
-                                            </div>
+                                            {/* <div> */}
+                                                <a href="/listofproducts" onClick={this.onDelete.bind(this,category.id)} class="btn btn-black mr-1 rounded-0">Delete</a>
+                                                {/* <a href="/listofproducts" class="btn btn-black btn-outline-black ml-1 rounded-0">Edit</a> */}
+                                                
+                                                <Link to={`/listofproducts/edit/${category.id}`}>
+                                                    <button class="btn btn-black btn-outline-black ml-1 rounded-0">
+                                                        Edit
+                                                    </button>
+                                                </Link>
+                                                    
+                                            {/* </div> */}
+                                            
                                             </div>                                            
                                             </div>
                                         </div>
@@ -81,6 +88,7 @@ export default class Listing extends Component {
                     </div>
                     </div>
                     </body>
+                
             </div>
         );
     }
