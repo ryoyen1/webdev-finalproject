@@ -85,16 +85,16 @@ onDelete(category_id)
   
             <div class="col-md-12" data-aos="fade-up" data-aos-delay="400">
                           
-              {/* <div class="row mb-4">
+              <div class="row mb-4">
                 <div class="col-md-7">
-                  <h1>Shop With Us</h1>
-                  <p class="mb-5 lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam assumenda ea quo cupiditate facere deleniti fuga officia.</p>
+                  <h1>Checkout the products</h1>
+                  <p class="mb-5 lead">Click Learn more to checkout our products.</p>
                   <div>
-                    <a href="/#" class="btn btn-white btn-outline-white py-3 px-5 rounded-0 mb-lg-0 mb-2 d-block d-sm-inline-block">Shop Now</a>
-                    <a href="/#" class="btn btn-white py-3 px-5 rounded-0 d-block d-sm-inline-block">Club Membership</a>
+                    <a href="/listofproducts" class="btn btn-white btn-outline-white py-3 px-5 rounded-0 mb-lg-0 mb-2 d-block d-sm-inline-block">Learn more</a>
+                    {/* <a href="/#" class="btn btn-white py-3 px-5 rounded-0 d-block d-sm-inline-block">Club Membership</a> */}
                   </div>
                 </div>
-              </div> */}
+              </div>
             </div>
           </div>
         </div>
