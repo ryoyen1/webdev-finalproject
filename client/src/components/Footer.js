@@ -15,10 +15,7 @@ class Footer extends Component{
                 <div class="col-md-3">
                   <h2 class="footer-heading mb-4">Quick Links</h2>
                   <ul class="list-unstyled">
-                    <li><a href="/#">About Us</a></li>
-                    <li><a href="/#">Services</a></li>
-                    <li><a href="/#">Testimonials</a></li>
-                    <li><a href="/#">Contact Us</a></li>
+                    <li><a href="/about">About Us</a></li>
                   </ul>
                 </div>
                 <div class="col-md-4">

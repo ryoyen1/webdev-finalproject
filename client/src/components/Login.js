@@ -30,6 +30,10 @@ class Login extends Component{
             if(res){
                 // console.log("hello")
                 this.props.history.push(`/profile`)
+                window.alert("Succesfully logged in")
+            }
+            else{
+                window.alert("Wrong credentials")
             }
         })
     }

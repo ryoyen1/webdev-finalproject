@@ -29,7 +29,7 @@ class Profile extends Component{
                     <table className="table col-md-4 mx-auto">
                         <tbody>
                             <tr>
-                                <td>Name</td>
+                                <td>Branch</td>
                                 <td>{this.state.name}</td>
                             </tr>
                             <tr>

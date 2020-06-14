@@ -118,7 +118,7 @@ onDelete(category_id)
             <div class="col-lg-4 col-md-3 mb-5">
               <div class="product-item">
                 <figure>
-                <img src="assets/images/questionmark.png" alt="" class="img-fluid"/>
+                <img src="assets/images/unyu.png" alt="" class="img-fluid"/>
                 </figure>
                 <div class="px-4">
                 <h3><a href="/#">{category.name}</a></h3>
@@ -145,6 +145,13 @@ onDelete(category_id)
       </div>
       
       <div class="site-blocks-cover inner-page-cover overlay get-notification" style={{backgroundImage: `url(${hero_2})`, backgroundAttachment: 'fixed'}} data-aos="fade">
+        <div class="container">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-md-6 mb-5 mb-md-0">
+              <img src="assets/images/unyu.png" alt="" class="img-fluid"/>
+            </div>
+          </div>
+        </div>
       </div>
       
       
@@ -165,7 +172,7 @@ onDelete(category_id)
           <div class="bg-white py-4 mb-4">
             <div class="row mx-4 my-4 product-item-2 align-items-start">
               <div class="col-md-6 mb-5 mb-md-0">
-                <img src="assets/images/questionmark.png" alt="" class="img-fluid"/>
+                <img src="assets/images/unyu.png" alt="" class="img-fluid"/>
               </div>
               <div class="col-md-5 ml-auto product-title-wrap">
                 <span class="number">01.</span>
@@ -174,11 +181,11 @@ onDelete(category_id)
                 
                 <div class="mb-4"> 
                   <h3 class="text-black font-weight-bold h5">Price:</h3>
-                  <div class="price"><del class="mr-2">$269.00</del> $69.00</div>
+                  <div class="price">${category.price}</div>
                 </div>
                 <p>
-                  <a href="/#" class="btn btn-black btn-outline-black rounded-0 d-block mb-2 mb-lg-0 d-lg-inline-block">View Details</a>
-                  <a href="/#" class="btn btn-black rounded-0 d-block d-lg-inline-block">Add To Cart</a>
+                  <a href="/listofproducts" class="btn btn-black btn-outline-black rounded-0 d-block mb-2 mb-lg-0 d-lg-inline-block">View Details</a>
+                  <a href="/#" class="btn btn-black rounded-0 d-block d-lg-inline-block">?</a>
                 </p>
               </div>
             </div>
@@ -189,7 +196,7 @@ onDelete(category_id)
         </div>
       </div>
   
-  
+  {/* ABOUT US HOME PAGE */}
       <div class="site-section" id="about-section">
         <div class="container">
           <div class="row align-items-lg-center">
@@ -197,13 +204,13 @@ onDelete(category_id)
               <img src="assets/images/about_1.jpg" class="img-fluid" alt=""/>
               <div class="experience">
                 <span class="year">Trusted Merchant</span>
-                <span class="caption">for 50 years</span>
+                <span class="caption"></span>
               </div>
             </div>
             <div class="col-md-3 ml-auto">
               <h3 class="section-sub-title"></h3>
               <h2 class="section-title mb-3">About Us</h2>
-              <p class="mb-4">!!Description about us!!</p>
+              <p class="mb-4">This is a website to order stocks for a company named Unyu Cheese Tea. This is made by two people Ryo yenata and Jotika Adhisthana Yuwono. This is also a final project for a course in Binus International course named Web Application and Development Security. This website is also made using React framework for the frontend and Laravel as a backend.</p>
               <p><a href="/#" class="btn btn-black btn-black--hover rounded-0">Learn More</a></p>
             </div>
           </div>

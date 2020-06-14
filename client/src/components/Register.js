@@ -31,8 +31,10 @@ class Register extends Component{
 
         register(newUser).then(res => {
             this.props.history.push(`/login`)
+            window.alert("Successfully registered")
         })
     }
+    
     render(){
         return(
             <div className="container">
@@ -43,7 +45,7 @@ class Register extends Component{
                                 Register
                             </h1>
                             <div className="form-group">
-                                <label htmlFor="name">First name</label>
+                                <label htmlFor="name">Branch name</label>
                                 <input type="text"
                                 className="form-control"
                                 name="first_name"
@@ -51,7 +53,7 @@ class Register extends Component{
                                 value={this.state.first_name}
                                 onChange={this.onChange}/>
                             </div>
-                            <div className="form-group">
+                            {/* <div className="form-group">
                                 <label htmlFor="name">Last name</label>
                                 <input type="text"
                                 className="form-control"
@@ -59,7 +61,7 @@ class Register extends Component{
                                 placeholder="Last Name"
                                 value={this.state.last_name}
                                 onChange={this.onChange}/>
-                            </div>
+                            </div> */}
                             <div className="form-group">
                                 <label htmlFor="email">Email Address</label>
                                 <input type="email"

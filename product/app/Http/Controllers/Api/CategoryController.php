@@ -21,8 +21,8 @@ class CategoryController extends Controller
 
     public function viewid($id)
     {
-        $result = Category::find($id);
-        return $result;
+        $category = Category::find($id);
+        return $category;
     }
 
     /**
