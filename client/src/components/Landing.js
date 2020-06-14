@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import '../App.css';
-import hero_2 from '../images/hero_2.jpg'
+// import hero_2 from '../images/hero_2.jpg'
+import bg_japan from '../images/background_japan.jpg'
 import Listing from '../components/ListofProducts'
 import axios from 'axios'
 
@@ -79,7 +80,7 @@ onDelete(category_id)
   
     
        
-      <div class="site-blocks-cover overlay" style={{backgroundImage: `url(${hero_2})`}} data-aos="fade" data-stellar-background-ratio="0.5">
+      <div class="site-blocks-cover overlay" style={{backgroundImage: `url(${bg_japan})`}} data-aos="fade" data-stellar-background-ratio="0.5">
         <div class="container">
           <div class="row align-items-center justify-content-center">
   
@@ -128,7 +129,7 @@ onDelete(category_id)
                   </div>
                   <p class="mb-4">{category.description}</p>
                     <div>
-                      <a href="/#" class="btn btn-black mr-1 rounded-0">Cart</a>
+                      
                       <a href="/listofproducts" class="btn btn-black btn-outline-black ml-1 rounded-0">View</a>
                     </div>
                   </div>                                            
@@ -144,7 +145,7 @@ onDelete(category_id)
         </div>
       </div>
       
-      <div class="site-blocks-cover inner-page-cover overlay get-notification" style={{backgroundImage: `url(${hero_2})`, backgroundAttachment: 'fixed'}} data-aos="fade">
+      <div class="site-blocks-cover inner-page-cover overlay get-notification" style={{backgroundImage: `url(${bg_japan})`, backgroundAttachment: 'fixed'}} data-aos="fade">
         <div class="container">
           <div class="row align-items-center justify-content-center">
             <div class="col-md-6 mb-5 mb-md-0">
@@ -185,7 +186,7 @@ onDelete(category_id)
                 </div>
                 <p>
                   <a href="/listofproducts" class="btn btn-black btn-outline-black rounded-0 d-block mb-2 mb-lg-0 d-lg-inline-block">View Details</a>
-                  <a href="/#" class="btn btn-black rounded-0 d-block d-lg-inline-block">?</a>
+                  <a href="/#" class="btn btn-black rounded-0 d-block d-lg-inline-block"></a>
                 </p>
               </div>
             </div>
