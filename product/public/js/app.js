@@ -70333,20 +70333,7 @@ var Add = /*#__PURE__*/function (_Component) {
         value: this.state.category_description,
         onChange: this.onChangeCategoryDescription,
         placeholder: "Enter descriptionasd"
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        "class": "input-group"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        "class": "custom-file"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "file",
-        "class": "custom-file-input",
-        id: "category_image",
-        value: this.state.category_image,
-        onChange: this.onChangeCategoryImage
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-        "class": "custom-file-label",
-        id: "category_image"
-      }, "Choose"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         type: "submit",
         "class": "btn btn-primary"
       }, "Submit")));
@@ -70543,20 +70530,7 @@ var Edit = /*#__PURE__*/function (_Component) {
         value: this.state.category_description,
         onChange: this.onChangeCategoryDescription,
         placeholder: "Enter descriptionasd"
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        "class": "input-group"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        "class": "custom-file"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "file",
-        "class": "custom-file-input",
-        id: "category_image",
-        value: this.state.category_image,
-        onChange: this.onChangeCategoryImage
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-        "class": "custom-file-label",
-        id: "category_image"
-      }, "Choose"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         type: "submit",
         "class": "btn btn-primary"
       }, "Submit")));

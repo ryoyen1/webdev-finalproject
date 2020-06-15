@@ -113,7 +113,7 @@ export default class Add extends Component {
                         placeholder ="Enter descriptionasd"
                         />
                     </div>
-                    <div class="input-group">
+                    {/* <div class="input-group">
                         <div class="custom-file">
                             <input type="file" 
                             class="custom-file-input"
@@ -123,7 +123,7 @@ export default class Add extends Component {
                             />
                             <label class="custom-file-label" id="category_image">Choose</label>
                         </div>
-                    </div>
+                    </div> */}
                 <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
