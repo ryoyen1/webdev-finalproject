@@ -70945,7 +70945,7 @@ var Edit = /*#__PURE__*/function (_Component) {
       var category = {
         category_name: this.state.category_name,
         category_price: this.state.category_price,
-        category_quantity: this.state.category_quantity,
+        category_quantity: this.state.category_quantity - 1,
         category_description: this.state.category_description,
         category_image: this.state.category_image
       };

@@ -124,8 +124,8 @@ onDelete(category_id)
                 <div class="px-4">
                 <h3><a href="/#">{category.name}</a></h3>
                   <div class="mb-3">
-                    <span class="meta-icons mr-3"><a href="/#" class="mr-2"><span class="icon-star text-warning"></span></a> 5.0</span>
-                    <span class="meta-icons wishlist"><a href="/#" class="mr-2"><span class="icon-heart"></span></a> 29</span>
+                    <span class="meta-icons mr-3"><a href="/#" class="mr-2"></a>${category.price}</span>
+                    <span class="meta-icons wishlist"><a href="/#" class="mr-2"></a>Stock:{category.quantity}</span>
                   </div>
                   <p class="mb-4">{category.description}</p>
                     <div>

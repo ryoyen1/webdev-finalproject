@@ -78,8 +78,18 @@ export default class Order extends Component {
 
 
 
-        Axios.put('https://backend-user-finalproject.herokuapp.com/api/category/order/'+this.props.match.params.id, category)
-        .then(res=>console.log(res.data))
+        Axios.put('https://backend-user-finalproject.herokuapp.com/api/category/update/'+this.props.match.params.id, category)
+        .then(res=>
+            console.log(res.data)
+            )
+            if(category.category_quantity <= 0){
+                window.alert("The stock is empty")
+                this.props.history.push(`/listofproducts`)
+                
+            }else{
+                window.alert("You ordered "+category.category_name)
+                category.category_quantity = category.category_quantity - 1
+            }
     }
 
     render(){
@@ -87,58 +97,53 @@ export default class Order extends Component {
             <div>
                 <form action="" method="POST" enctype="multipart/form-data" onSubmit={this.onSubmit}>
                     
-                    <div class="form-group">
-                        <label for="category_name">Category name update</label>
-                        <input type="text" 
-                        class="form-control"
-                        id="category_name" 
-                        value = {this.state.category_name}
-                        onChange={this.onChangeCategoryName}
-                        placeholder ="Enter Name"
-                        />
-                    </div>
-                    <div class="form-group">
-                        <label for="category_price">Category price</label>
-                        <input type="number" 
-                        class="form-control"
-                        id="category_price" 
-                        value = {this.state.category_price}
-                        onChange={this.onChangeCategoryPrice}
-                        placeholder ="Enter price"
-                        />
-                    </div>
-                    <div class="form-group">
-                        <label for="category_quantity">Category quantity</label>
-                        <input type="number" 
-                        class="form-control"
-                        id="category_quantity" 
-                        value = {this.state.category_quantity}
-                        onChange={this.onChangeCategoryQuantity}
-                        placeholder ="Enter quantity"
-                        />
-                    </div>
-                    <div class="form-group">
-                        <label for="category_description">Category description</label>
-                        <input type="text" 
-                        class="form-control"
-                        id="category_description" 
-                        value = {this.state.category_description}
-                        onChange={this.onChangeCategoryDescription}
-                        placeholder ="Enter description"
-                        />
-                    </div>
-                    {/* <div class="input-group">
-                        <div class="custom-file">
-                            <input type="file" 
-                            class="custom-file-input"
-                            id="category_image"
-                            value = {this.state.category_image}
-                            onChange={this.onChangeCategoryImage}
-                            />
-                            <label class="custom-file-label" id="category_image">Choose</label>
-                        </div>
-                    </div> */}
-                <button type="submit" class="btn btn-primary">Submit</button>
+                {/* <div class="col-lg-8">
+              <div class="product-item">
+                <figure>
+                <img src={require('./unyu.png')} alt="" class="img-fluid"/>
+                </figure>
+                <div class="px-4">
+                <h3><a href="/#">{this.state.category_name}</a></h3>
+                  <div class="mb-3">
+                    <span class="meta-icons mr-3"><a href="/#" class="mr-2"></a>${this.state.category_price}</span>
+                    <span class="meta-icons wishlist"><a href="/#" class="mr-2"></a>Stock:{this.state.category_quantity}</span>
+                  </div>
+                  <p class="mb-4">{this.state.category_description}</p>
+                  </div>                                            
+                </div>
+               </div> */}
+
+<div class="site-section bg-light">
+        <div class="container">
+
+          <div class="bg-white py-4 mb-4">
+            <div class="row mx-4 my-4 product-item-2 align-items-start">
+              <div class="col-md-6 mb-5 mb-md-0">
+                <img src={require('./unyu.png')} alt="" class="img-fluid"/>
+              </div>
+              <div class="col-md-5 ml-auto product-title-wrap">
+                
+                {/* <h3 class="text-black mb-4 font-weight-bold">About This Product</h3>
+                <p class="mb-4">{this.state.category_description}</p> */}
+                
+                <div class="mb-4"> 
+                  <h3 class="text-black font-weight-bold h5">Name:</h3>
+                  <div class="price">{this.state.category_name}</div>
+                </div>
+                <div class="mb-4"> 
+                  <h3 class="text-black font-weight-bold h5">Price:</h3>
+                  <div class="price">${this.state.category_price}</div>
+                </div>
+                <div class="mb-4"> 
+                  <h3 class="text-black font-weight-bold h5">Description:</h3>
+                  <div class="price">{this.state.category_description}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+                <button type="submit" class="btn btn-primary">Order</button>
                 </form>
             </div>
         );
