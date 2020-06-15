@@ -34,7 +34,7 @@ class Register extends Component{
             window.alert("Successfully registered")
         })
     }
-    
+
     render(){
         return(
             <div className="container">
@@ -49,7 +49,7 @@ class Register extends Component{
                                 <input type="text"
                                 className="form-control"
                                 name="first_name"
-                                placeholder="First Name"
+                                placeholder="Branch name"
                                 value={this.state.first_name}
                                 onChange={this.onChange}/>
                             </div>

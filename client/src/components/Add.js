@@ -118,7 +118,7 @@ export default class Add extends Component{
                             id="category_description" 
                             value = {this.state.category_description}
                             onChange={this.onChangeCategoryDescription}
-                            placeholder ="Enter descriptionasd"
+                            placeholder ="Enter description"
                             />
                         </div>
                         {/* <div class="input-group">
