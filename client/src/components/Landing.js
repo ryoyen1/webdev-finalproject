@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import '../App.css';
-// import hero_2 from '../images/hero_2.jpg'
+import hero_2 from '../images/hero_2.jpg'
 import bg_japan from '../images/background_japan.jpg'
 import Listing from '../components/ListofProducts'
 import axios from 'axios'
@@ -186,7 +186,7 @@ onDelete(category_id)
                 </div>
                 <p>
                   <a href="/listofproducts" class="btn btn-black btn-outline-black rounded-0 d-block mb-2 mb-lg-0 d-lg-inline-block">View Details</a>
-                  <a href="/#" class="btn btn-black rounded-0 d-block d-lg-inline-block"></a>
+                  {/* <a href="/#" class="btn btn-black rounded-0 d-block d-lg-inline-block"></a> */}
                 </p>
               </div>
             </div>
