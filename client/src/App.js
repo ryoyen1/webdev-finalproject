@@ -16,6 +16,7 @@ import ListofProductsEdit from './components/ListofProductsEdit'
 import Edit from './components/Edit'
 import About from './components/About'
 import ViewProduct from './components/ViewProduct'
+import Order from './components/Order';
 
 class App extends Component{
   render(){
@@ -36,6 +37,7 @@ class App extends Component{
             <Route exact path="/listofproducts/edit/:id" component={Edit}/>
             <Route exact path="/about" component={About}/>
             <Route exact path="/listofproducts/:id" component={ViewProduct}/>
+            <Route exact path="/listofproducts/order/:id" component={Order}/>
           </div>
           <Footer/>
         </div>

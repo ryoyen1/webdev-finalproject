@@ -67,7 +67,7 @@ export default class Listing extends Component {
                                             </div>
                                             <p class="mb-4">{category.description}</p>
                                             {/* <div> */}
-                                                <a href="/listofproducts" onClick={this.onDelete.bind(this,category.id)} class="btn btn-black mr-1 rounded-0">Delete</a>
+                                                <a href="/listofproductsEdit" onClick={this.onDelete.bind(this,category.id)} class="btn btn-black mr-1 rounded-0">Delete</a>
                                                 {/* <a href="/listofproducts" class="btn btn-black btn-outline-black ml-1 rounded-0">Edit</a> */}
                                                 
                                                 <Link to={`/listofproducts/edit/${category.id}`}>

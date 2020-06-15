@@ -6,8 +6,10 @@ import {BrowserRouter as withRouter,Link} from 'react-router-dom'
 export default class Listing extends Component {
     constructor(){
         super()
+        this.onChangeCategoryQuantity=this.onChangeCategoryQuantity.bind(this)
         this.state={
-            categories : []
+            categories : [],
+            category_quantity : 0
         }
     }
 
@@ -35,6 +37,23 @@ export default class Listing extends Component {
                 }
             }
         })
+    }
+
+    onOrder(category_id)
+    {
+        var quantity = this.state.quantity
+        axios.get('https://backend-user-finalproject.herokuapp.com/api/category')
+        .then(response=>{
+            this.setState({categories:response.data.quantity - 1})
+            console.log("Minus - 1")
+        })
+    }
+
+    onChangeCategoryQuantity(e){
+        this.setState({
+            category_quantity:e.target.value
+        })
+        console.log("it worked")
     }
 
     render(){
@@ -67,8 +86,11 @@ export default class Listing extends Component {
                                             </div>
                                             <p class="mb-4">{category.description}</p>
                                             {/* <div> */}
-                                                <a href="/" onClick={this.onDelete.bind(this,category.id)} class="btn btn-black mr-1 rounded-0">Order</a>
-                                                {/* <a href="/listofproducts" class="btn btn-black btn-outline-black ml-1 rounded-0">Edit</a> */}
+                                                <Link to={`/listofproducts/order/${category.id}`}>
+                                                    <button class="btn btn-black mr-1 rounded-0">
+                                                        Order
+                                                    </button>
+                                                </Link>
                                                 
                                                 <Link to={`/listofproducts/${category.id}`}>
                                                     <button class="btn btn-black btn-outline-black ml-1 rounded-0">

@@ -21,6 +21,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('category','Api\CategoryController@index');
 Route::post('category/store','Api\CategoryController@store');
 Route::delete('category/delete/{id}','Api\CategoryController@destroy');
+Route::get('category/order/{id}','Api\CategoryController@decrease');
+
 Route::get('category/{id}','Api\CategoryController@viewid');
 Route::get('category/edit/{id}','Api\CategoryController@edit');
 Route::put('category/update/{id}','Api\CategoryController@update');

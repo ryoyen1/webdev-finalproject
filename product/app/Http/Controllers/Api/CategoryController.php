@@ -136,4 +136,20 @@ class CategoryController extends Controller
         $category = Category::find($id);
         $category->delete();
     }
+
+    public function decrease(Request $request, $id)
+    {
+        $category = Category::find($id);
+        $category->name = $request->category_name;
+        $category->price = $request->category_price;
+        $category->quantity = $request->category_quantity;
+        // DB::table('categories')
+        // ->where('$id',1)
+        // ->update([
+        //     'quantity' => DB::raw('quantity - 1')
+        // ]);
+        $category->description = $request->category_description;
+        $category->image = $request->category_image;
+        $category->save();
+    }
 }

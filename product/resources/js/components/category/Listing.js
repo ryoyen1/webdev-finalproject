@@ -11,19 +11,33 @@ import {BrowserRouter as Router,Link,Route} from 'react-router-dom'
 // module.exports = axiosInstance
 
 export default class Listing extends Component {
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
         this.state={
             categories : [],
-            categories_view : []
+            categories_view : [],
+            category_name:'',
+            category_price:'',
+            category_quantity:'',
+            category_description:'',
+            category_image:''
         }
     }
 
     componentDidMount()
     {
+        
         axios.get('https://backend-user-finalproject.herokuapp.com/api/category')
         .then(response=>{
-            this.setState({categories:response.data})
+            this.setState({
+                categories:response.data,
+                category_name:response.data.name,
+                category_price:response.data.price,
+                category_quantity:response.data.quantity,
+                category_description:response.data.description,
+                category_image:response.data.images
+                
+            })
         })
     }
 
@@ -56,7 +70,6 @@ export default class Listing extends Component {
     }
 
 
-
     render(){
         return (
             <div>
@@ -84,7 +97,8 @@ export default class Listing extends Component {
                         <td>{category.description}</td>
                         <td>
                             <Link to={`/category/edit/${category.id}`}>Edit</Link> |
-                            <a href="#" onClick={this.onDelete.bind(this,category.id)}>Delete</a></td>
+                            <a href="#" onClick={this.onDelete.bind(this,category.id)}>Delete</a> |
+                            <Link to={`/category/order/${category.id}`}>Order</Link></td>
 
                         <td>
                             <Link to={`/category/${category.id}`}>View</Link>

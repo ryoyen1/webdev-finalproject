@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
-import {BrowserRouter as withRouter,Link} from 'react-router-dom'
 
-export default class ViewProduct extends Component {
+export default class Edit extends Component {
 
     constructor(props){
         super(props)
@@ -85,28 +84,14 @@ export default class ViewProduct extends Component {
 
     render(){
         return (
-            <div class="site-section bg-light">
-        <div class="container">
-
-          <div class="bg-white py-4 mb-4">
-            <div class="row mx-4 my-4 product-item-2 align-items-start">
-              <div class="col-md-6 mb-5 mb-md-0">
-                <img src={require('./unyu.png')} alt="" class="img-fluid"/>
-              </div>
-              <div class="col-md-5 ml-auto product-title-wrap">
-                
-                <h3 class="text-black mb-4 font-weight-bold">About This Product</h3>
-                <p class="mb-4">{this.state.category_description}</p>
-                
-                <div class="mb-4"> 
-                  <h3 class="text-black font-weight-bold h5">Price:</h3>
-                  <div class="price">${this.state.category_price}</div>
-                </div>
-              </div>
+            <div>
+                Your order:
+                {this.state.category_name},
+                {this.state.category_price},
+                {this.state.category_quantity},
+                {this.state.category_description},
+                {this.state.category_image}
             </div>
-          </div>
-        </div>
-      </div>
         );
     }
 }
